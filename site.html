@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dubai map</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src='js/knockout.js'></script>
+	<script src='js/jquery.js'></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA6qoUKQ3WJQd4ZxAahhFPM80WJbw-yws&callback=initMap&libraries=places" onerror="showError()" async defer></script>
+</head>
+<body>
+
+
+  <div style='width: 300px'>
+      <div  id="nav-toggle" onclick="actives()">&#9776;</div>
+    <div id="sidebar">
+    	<div id="close"  onclick="closemenu()">&#215;</div>
+    	<input class="form-control" placeholder="Search…" type="search" data-bind="textInput: searchlist, valueUpdate: 'afterkeydown'" />
+    	
+      <ul data-bind="foreach: filteredList">
+        
+        
+        <li style='cursor:pointer' data-bind="text: name, click: show_window"></li>
+        
+      </ul>  
+    </div>
+  </div>  
+		<div class="map" id="map">There has been an error loading Google Maps please contact amr.elkady153@gmail.com for support</div>
+	</div>
+	<script src='js/app.js'></script>
+
+</body>
+</html>
